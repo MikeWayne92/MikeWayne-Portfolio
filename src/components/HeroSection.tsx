@@ -8,7 +8,7 @@ const HeroSection = () => {
       <GlassTile className="flex flex-col items-center text-center">
         <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-saffron/50 mb-6 flex items-center justify-center bg-platinum/10">
           <img 
-            src="/MW Logo.png" 
+            src={import.meta.env.BASE_URL + "MW Logo.png"}
             alt="Mike Wayne Logo" 
             className="w-4/5 h-4/5 object-contain"
           />

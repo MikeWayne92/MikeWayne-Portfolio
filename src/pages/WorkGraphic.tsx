@@ -41,7 +41,7 @@ const WorkGraphic = () => {
                 </p>
                 <div className="w-full overflow-hidden rounded-lg shadow-lg">
                   <img 
-                    src="/graphics/Texans.png" 
+                    src={import.meta.env.BASE_URL + "graphics/Texans.png"}
                     alt="Texans T-shirt Design"
                     className="w-full h-auto"
                   />
@@ -52,7 +52,7 @@ const WorkGraphic = () => {
                       controls
                       className="w-full h-auto"
                     >
-                      <source src="/graphics/Texans.bwalking.mp4" type="video/mp4" />
+                      <source src={import.meta.env.BASE_URL + "graphics/Texans.bwalking.mp4"} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                   </div>
@@ -61,7 +61,7 @@ const WorkGraphic = () => {
                       controls
                       className="w-full h-auto"
                     >
-                      <source src="/graphics/Texans.wwalking.mp4" type="video/mp4" />
+                      <source src={import.meta.env.BASE_URL + "graphics/Texans.wwalking.mp4"} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                   </div>
@@ -76,12 +76,12 @@ const WorkGraphic = () => {
                 </p>
                 <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 overflow-hidden rounded-lg shadow-lg">
                   <img 
-                    src="/graphics/Dbz.gotenks.png" 
+                    src={import.meta.env.BASE_URL + "graphics/Dbz.gotenks.png"}
                     alt="Gotenks Sticker Design"
                     className="w-full h-auto"
                   />
                   <img 
-                    src="/graphics/Dbz.buu.png" 
+                    src={import.meta.env.BASE_URL + "graphics/Dbz.buu.png"}
                     alt="Majin Buu Sticker Design"
                     className="w-full h-auto"
                   />
@@ -92,7 +92,7 @@ const WorkGraphic = () => {
                       controls
                       className="w-full h-auto"
                     >
-                      <source src="/graphics/Dbz.gotenksreveal.mp4" type="video/mp4" />
+                      <source src={import.meta.env.BASE_URL + "graphics/Dbz.gotenksreveal.mp4"} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                   </div>
@@ -101,7 +101,7 @@ const WorkGraphic = () => {
                       controls
                       className="w-full h-auto"
                     >
-                      <source src="/graphics/Dbz.buureveal.mp4" type="video/mp4" />
+                      <source src={import.meta.env.BASE_URL + "graphics/Dbz.buureveal.mp4"} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                   </div>

@@ -68,14 +68,14 @@ const WorkAnalysis = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                   <div className="overflow-hidden rounded-lg shadow-lg">
                     <img 
-                      src="/dash/Poland.main.png" 
+                      src={import.meta.env.BASE_URL + "dash/Poland.main.png"}
                       alt="Poland Shipping Dashboard Main View"
                       className="w-full h-auto"
                     />
                   </div>
                   <div className="overflow-hidden rounded-lg shadow-lg">
                     <img 
-                      src="/dash/Poland.consumer.png" 
+                      src={import.meta.env.BASE_URL + "dash/Poland.consumer.png"}
                       alt="Poland Shipping Dashboard Consumer View"
                       className="w-full h-auto"
                     />

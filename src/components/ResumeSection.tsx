@@ -182,7 +182,7 @@ const ResumeSection = () => {
         {/* Download Button */}
         <div className="flex justify-center mt-8">
           <DownloadButton 
-            href="/resume.pdf" 
+            href={import.meta.env.BASE_URL + "resume.pdf"} 
             label="Download Full Resume" 
             className="min-w-[240px]"
           />
