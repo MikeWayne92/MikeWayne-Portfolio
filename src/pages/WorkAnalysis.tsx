@@ -123,14 +123,14 @@ const WorkAnalysis = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                   <div className="overflow-hidden rounded-lg shadow-lg">
                     <img 
-                      src="/dash/Spotify.main.png" 
+                      src={import.meta.env.BASE_URL + "dash/Spotify.main.png"}
                       alt="Spotify Dashboard Main View"
                       className="w-full h-auto"
                     />
                   </div>
                   <div className="overflow-hidden rounded-lg shadow-lg">
                     <img 
-                      src="/dash/Spotify.bydayofweek.png" 
+                      src={import.meta.env.BASE_URL + "dash/Spotify.bydayofweek.png"}
                       alt="Spotify Dashboard By Day of Week"
                       className="w-full h-auto"
                     />
