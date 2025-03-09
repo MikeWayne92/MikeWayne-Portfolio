@@ -1,0 +1,248 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 164 46% 20%;
+    --foreground: 169 14% 85%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 51 90% 57%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 169 14% 85%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 164 10% 28%;
+    --muted-foreground: 168 14% 80%;
+
+    --accent: 324 36% 12%;
+    --accent-foreground: 169 14% 85%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 169 14% 85% / 0.1;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 51 90% 57%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-brunswick-green text-platinum font-sans overflow-x-hidden relative;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-platinum font-medium tracking-tight;
+  }
+
+  section {
+    @apply min-h-screen w-full py-16 px-4 relative flex flex-col items-center justify-center;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  
+  .glasstile {
+    @apply rounded-3xl glass p-6 md:p-8 relative overflow-hidden max-w-4xl mx-auto w-full;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl lg:text-5xl mb-8 font-semibold relative inline-block;
+  }
+  
+  .section-heading::after {
+    @apply content-[''] absolute bottom-0 left-0 w-1/2 h-1 bg-saffron rounded-full;
+  }
+
+  .nav-link {
+    @apply relative px-3 py-2 text-platinum/80 hover:text-platinum transition-colors duration-300 cursor-pointer;
+  }
+  
+  .nav-link::after {
+    @apply content-[''] absolute left-0 right-0 bottom-0 h-0.5 bg-saffron scale-x-0 origin-left transition-transform duration-300;
+  }
+  
+  .nav-link:hover::after {
+    @apply scale-x-100;
+  }
+  
+  .nav-link.active {
+    @apply text-platinum;
+  }
+  
+  .nav-link.active::after {
+    @apply scale-x-100;
+  }
+
+  .btn {
+    @apply relative inline-flex items-center justify-center px-6 py-3 overflow-hidden rounded-full 
+    font-medium text-sm md:text-base transition-all duration-300 ease-natural
+    focus:outline-none focus-visible:ring-2 focus-visible:ring-saffron focus-visible:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-saffron text-eerieblack hover:bg-saffron/90 active:scale-[0.98];
+  }
+  
+  .btn-outline {
+    @apply border border-platinum/20 hover:bg-white/10 active:scale-[0.98];
+  }
+
+  .social-icon {
+    @apply flex items-center justify-center w-10 h-10 rounded-full 
+    bg-white/10 hover:bg-white/20 transition-all duration-300 
+    text-platinum hover:text-saffron active:scale-95;
+  }
+  
+  /* SVG Loader Animation */
+  .loader {
+    width: 12em;
+    height: 12em;
+  }
+
+  .loader path {
+    stroke: #F4C430;
+    stroke-width: 0.6px;
+    animation: dashArray 4s ease-in-out infinite,
+      dashOffset 4s linear infinite;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .animate-star-movement-bottom {
+    animation: star-movement-bottom linear infinite alternate;
+    animation-duration: 6s;
+  }
+  
+  .animate-star-movement-top {
+    animation: star-movement-top linear infinite alternate;
+    animation-duration: 6s;
+  }
+}
+
+@keyframes star-movement-bottom {
+  0% { transform: translate(0%, 0%); opacity: 1; }
+  100% { transform: translate(-100%, 0%); opacity: 0; }
+}
+
+@keyframes star-movement-top {
+  0% { transform: translate(0%, 0%); opacity: 1; }
+  100% { transform: translate(100%, 0%); opacity: 0; }
+}
+
+@keyframes dashArray {
+  0% {
+    stroke-dasharray: 0 1 359 0;
+  }
+
+  50% {
+    stroke-dasharray: 0 359 1 0;
+  }
+
+  100% {
+    stroke-dasharray: 359 1 0 0;
+  }
+}
+
+@keyframes dashOffset {
+  0% {
+    stroke-dashoffset: 365;
+  }
+
+  100% {
+    stroke-dashoffset: 5;
+  }
+}
+
+/* Liquid Background Elements */
+.droplet {
+  position: absolute;
+  border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+  transform: rotate(45deg);
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+
+/* Ensure improved animation performance */
+.hardware-accelerated {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .droplet {
+    display: none;
+  }
+}
